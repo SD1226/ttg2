@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Start
+</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+</head>
+<body>
+<div id="ttt">Tic-Tac-Toe</div>
+<div id="fbox">
+	<form id="form" onSubmit="getDat()" action="game.html">
+		Name:<br />
+		<input type="text" name="name" id="name" maxlength="12" required />
+		<br /><br />
+		Play as:<br />
+		<select name="player" id="pno">
+			<option value=1>Player 1</option>
+			<option value=2>Player 2</option>
+		</select>
+		<br /><br />
+		<button type="submit">Play</button>
+		<br /><br />
+	</form>
+</div>
+</body>
+<script>
+function getDat()
+{
+	var pname = document.getElementById("name").value;
+	var pno = document.getElementById("pno").value;
+	localStorage.setItem("pname",pname);
+	localStorage.setItem("pno",pno);	
+}
+</script>
+</html>
